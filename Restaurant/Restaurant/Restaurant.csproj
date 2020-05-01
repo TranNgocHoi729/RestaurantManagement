@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46C65DC6-4BB8-48EA-B6D8-D4AA9D72F5D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Restaurant</RootNamespace>
+    <AssemblyName>Restaurant</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customer\CustomerManagemenr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerManagemenr.Designer.cs">
+      <DependentUpon>CustomerManagemenr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\NewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\NewCustomer.Designer.cs">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\CustomerDao.cs" />
+    <Compile Include="DataAccess\DetailDao.cs" />
+    <Compile Include="DataAccess\FinancialDao.cs" />
+    <Compile Include="DataAccess\OrderDao.cs" />
+    <Compile Include="Employee\Emp_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Emp_Report.Designer.cs">
+      <DependentUpon>Emp_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Orders.cs" />
+    <Compile Include="Financial\FinancialReporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financial\FinancialReporting.Designer.cs">
+      <DependentUpon>FinancialReporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food_Drink\Add_new_dish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Food_Drink\Add_new_dish.Designer.cs">
+      <DependentUpon>Add_new_dish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Dao.cs" />
+    <Compile Include="DataAccess\DishDao.cs" />
+    <Compile Include="DataAccess\EmployeeDao.cs" />
+    <Compile Include="Employee\EmployeeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\EmployeeManager.Designer.cs">
+      <DependentUpon>EmployeeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Dish.cs" />
+    <Compile Include="Entity\Employee.cs" />
+    <Compile Include="Food_Drink\Food_Drink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Food_Drink\Food_Drink.Designer.cs">
+      <DependentUpon>Food_Drink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\New_Emp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\New_Emp.Designer.cs">
+      <DependentUpon>New_Emp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\NewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\NewOrder.Designer.cs">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\OrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\OrderDetail.Designer.cs">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Customer\CustomerManagemenr.resx">
+      <DependentUpon>CustomerManagemenr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\NewCustomer.resx">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Emp_Report.resx">
+      <DependentUpon>Emp_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financial\FinancialReporting.resx">
+      <DependentUpon>FinancialReporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Food_Drink\Add_new_dish.resx">
+      <DependentUpon>Add_new_dish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeManager.resx">
+      <DependentUpon>EmployeeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Food_Drink\Food_Drink.resx">
+      <DependentUpon>Food_Drink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\New_Emp.resx">
+      <DependentUpon>New_Emp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\NewOrder.resx">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\OrderDetail.resx">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\Orders.resx">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
